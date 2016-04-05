@@ -28,19 +28,27 @@
         </div>
       </md-toolbar>
       
-      <md-list>
+      <md-list class = "sidemenu">
         <md-item>
-            <div layout="row" layout-align="start center" ng-click="changeSelectedItem(item.title)" style="cursor:pointer;" ui-sref="{{item.link}}">
-            <div layout = "row">
+            <div layout = "row" ng-click="changeSelectedItem('Home')">
               <div class="inset">
-                <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+                <ng-md-icon icon="home"></ng-md-icon>
               </div>
-              <div class="inset">
-                {{item.title}}                  
+              <div class="inset">                
+                Home              
               </div>
-              </div>              
-            </div>            
+            </div>              
         </md-item>          
+        <md-item>
+            <div layout = "row" ng-click="changeSelectedItem('Allocation')">
+              <div class="inset">
+                <ng-md-icon icon="info"></ng-md-icon>
+              </div>
+              <div class="inset">                
+                Parking allocation              
+              </div>
+            </div>              
+        </md-item>   
     </md-list>
 
    </md-sidenav>
@@ -55,9 +63,7 @@
           </h3>
           <span flex></span>
           
-          <md-button aria-label="Open Settings" ui-sref="userNotifications">
-            <ng-md-icon icon="notifications"></ng-md-icon>
-          </md-button>
+         
         </div>        
       </md-toolbar>
      
@@ -82,7 +88,9 @@
 
     <script type="text/javascript" src="module.js"></script>
     <script type="text/javascript" src="routes.js"></script>
-    <script type="text/javascript" src="GlobalSettings.js"></script>
+    <script type="text/javascript" src="MainService.js"></script>    
     <script type="text/javascript" src="GlobalController.js"></script>    
+    <script type="text/javascript" src="dashboard/DashboardController.js"></script>    
+    <script type="text/javascript" src="allocation/AllocationController.js"></script> 
   </body>
 </html>

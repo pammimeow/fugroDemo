@@ -1,0 +1,43 @@
+
+<div layout="row">
+<div flex="60">
+	Showing allocation for week starting {{showProperDate(currentDate)}}
+</div>
+<div flex="40">
+	<md-button ng-click="prev()" class="md-raised md-primary"> Prev </md-button>
+	<md-button ng-click="next()" class="md-raised md-primary"> Next </md-button>
+</div>
+</div>
+<div layout="row">
+	<div flex="20"></div>
+	<div flex="60">
+		<div layout="row">
+			<div flex="20"  ng-repeat="date in weekDates track by $index">
+				{{date}}
+			</div>
+		</div>
+		<div layout="row">
+			<div flex="20"  ng-repeat="day in days track by $index">
+				{{day}}
+			</div>
+		</div>
+		<div layout="row">
+			<div flex="50">
+				Park
+			</div>	
+			<div flex="50">
+				Employees
+			</div>			
+		</div>
+		<div layout="row" ng-repeat="park in parks track by $index">
+			<div flex="50"  >
+				{{park}}
+			</div>	
+			<div flex="50" >
+				{{currentAllocation[$index]}}
+			</div>			
+		</div>
+	</div>
+	<div flex="20"></div>
+
+</div>
