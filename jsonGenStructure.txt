@@ -1,0 +1,16 @@
+[
+  '{{repeat(5, 7)}}',
+  {
+    id: '{{objectId()}}',   
+    name: '{{lorem(1, "words")}}',    
+    sensors: [
+      '{{repeat(5, 7)}}',
+      {
+      	id: '{{objectId()}}',
+    	name: '{{lorem(1, "words")}}',
+        minVal: '{{integer(5, 100)}}',
+        maxVal: '{{integer(400, 1000)}}'
+      }
+    ]
+  }
+]
